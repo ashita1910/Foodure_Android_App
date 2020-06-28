@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinatorLayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/colorToolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/txtHeader"
+                android:layout_weight="4.5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Choose from menu listed below:"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="19sp"
+                android:maxLines="1"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_weight="1.5"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="15dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_action_favourite" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:context=".activity.AllRestaurantsDetailsActivity"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAllDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"/>
+
+        <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+        </FrameLayout>
+
+            <Button
+                android:id="@+id/btnProceedToCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:padding="6dp"
+                android:textSize="20sp"
+                android:layout_gravity="bottom"
+                android:background="@color/colorToolbar"
+                android:text="PROCEED TO CART"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
