@@ -1,8 +1,8 @@
-# Foodure_Android_App
+# Foodure : An Online Food Delivery Android Application
 
 ## **Description :**
 
-This is the official repository of the industrial training project of 2020-2021 done under Android App Development. In this training, I have made an android application named _**"FOODURE"**_, which is a **food delivery application** made using _Kotlin and XML_.
+This is the official repository of the industrial training project of 2020-2021 done under Android App Development. In this training, I have made an android application named _**"FOODURE"**_, which is an online **food delivery application** made using _Kotlin and XML_.
 
 ## **Problem Statement :**
 
